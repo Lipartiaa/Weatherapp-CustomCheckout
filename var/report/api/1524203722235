@@ -1,0 +1,1 @@
+"Fatal Error: 'Cannot use Magento\\Tests\\NamingConvention\\true\\string as string because 'string' is a special class name' in '\/var\/www\/html\/app\/code\/Duvall\/Blog\/Api\/Data\/PostInterface.php' on line 5"

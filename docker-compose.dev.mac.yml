@@ -1,0 +1,16 @@
+services:
+  phpfpm:
+    volumes: &appvolumes-mac
+      - workspace:/var/www/html
+
+  phpfpm_xdebug:
+    volumes: *appvolumes-mac
+
+  nginx:
+    volumes: *appvolumes-mac
+
+  node:
+    volumes: *appvolumes-mac
+
+volumes:
+  workspace:

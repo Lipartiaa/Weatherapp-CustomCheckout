@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Duvall\Blog\Api\PostRepositoryInterface" type="Duvall\Blog\Model\PostRepository"/>
+    <preference for="Duvall\Blog\Api\Data\PostInterface" type="Duvall\Blog\Model\Post"/>
+</config>

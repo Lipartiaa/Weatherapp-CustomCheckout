@@ -1,0 +1,38 @@
+{
+    "tfa_user_config": {
+        "constraint": {
+            "PRIMARY": true,
+            "TFA_USER_CONFIG_USER_ID_ADMIN_USER_USER_ID": true
+        },
+        "column": {
+            "config_id": true,
+            "user_id": true,
+            "encoded_providers": true,
+            "encoded_config": true,
+            "default_provider": true
+        }
+    },
+    "tfa_country_codes": {
+        "constraint": {
+            "PRIMARY": true
+        },
+        "index": {
+            "TFA_COUNTRY_CODES_CODE": true
+        },
+        "column": {
+            "country_id": true,
+            "code": true,
+            "name": true,
+            "dial_code": true
+        }
+    },
+    "msp_tfa_user_config": {
+        "constraint": []
+    },
+    "msp_tfa_trusted": {
+        "constraint": []
+    },
+    "tfa_trusted": {
+        "constraint": []
+    }
+}
