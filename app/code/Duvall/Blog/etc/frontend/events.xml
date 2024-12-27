@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-    <event name="duvall_blog_post_detail_view">
-        <observer name="duvall_blog_observer_log_post_detail_view"
-                  instance="Duvall\Blog\Observer\LogPostDetailView"/>
-    </event>
-</config>

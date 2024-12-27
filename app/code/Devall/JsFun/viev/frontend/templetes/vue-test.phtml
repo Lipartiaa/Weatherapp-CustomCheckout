@@ -1,0 +1,21 @@
+<?php
+
+
+/** @var \Devall\JsFun\ViewModel\Message $messageViewModel */
+$messageViewModel = $block->getData('message_view_model');
+?>
+
+<div id="vue-test">
+    <!-- The "message" property defined below is now available within your template. -->
+    <h1>{{ message }}</h1>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#vue-test": {
+            "Devall_JsFun/js/vue-test": {
+                "message": "<?= $messageViewModel->getMessage() // Call your function here... ?>"
+            }
+        }
+    }
+</script>
