@@ -1035,6 +1035,24 @@ var config = {
 require.config(config);
 })();
 (function() {
+var config = {
+    config: {
+        mixins: {
+            'Magento_Checkout/js/view/summary/cart-items': {
+                'Macademy_CheckoutMessages/js/view/summary/cart-items-mixin': true
+            }
+        }
+    },
+    map: {
+        '*': {
+            'Magento_Checkout/template/sidebar': 'Macademy_CheckoutMessages/template/sidebar'
+        }
+    }
+};
+
+require.config(config);
+})();
+(function() {
 /**
  * Config to pull in all the relevant Braintree JS SDKs
  * @type {{paths: {braintreePayPalInContextCheckout: string, braintreePayPalCheckout: string, braintreeVenmo: string, braintreeHostedFields: string, braintreeDataCollector: string, braintreeThreeDSecure: string, braintreeGooglePay: string, braintreeApplePay: string, braintreeAch: string, braintreeLpm: string, googlePayLibrary: string}, map: {"*": {braintree: string}}}}
