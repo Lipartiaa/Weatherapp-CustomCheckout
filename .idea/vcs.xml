@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/app/code/Macademy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/defeat-knockoutjs-magento-2" vcs="Git" />
   </component>
 </project>

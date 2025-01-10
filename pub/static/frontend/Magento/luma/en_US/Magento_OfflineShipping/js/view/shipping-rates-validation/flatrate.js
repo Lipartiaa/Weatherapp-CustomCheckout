@@ -1,1 +1,0 @@
-/var/www/html/vendor/magento/module-offline-shipping/view/frontend/web/js/view/shipping-rates-validation/flatrate.js

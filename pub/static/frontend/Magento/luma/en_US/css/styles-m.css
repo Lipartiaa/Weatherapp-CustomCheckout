@@ -5992,13 +5992,56 @@ div[data-content-type='video'] video {
 .form.send.friend .g-recaptcha {
   margin-top: 40px;
 }
-#free-shipping-banner {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eaf1f7;
-  color: #575757;
+#shipping-plan {
+  overflow: auto;
+  margin-top: -20px;
+}
+.sku-lookup input {
+  width: 180px;
+}
+.sku-lookup button {
+  margin: -3px 0 0 6px;
+}
+.sku-lookup .message-response {
+  padding: 8px 0;
+}
+.box-configurations {
+  width: 700px;
+  overflow-x: auto;
+}
+.box-configurations input {
+  width: 60px;
+}
+.box-configurations .delete {
+  display: block;
+  padding-top: 5px;
+  cursor: pointer;
+  color: #d10029;
+}
+.box-configurations table {
+  margin-bottom: 28px;
+}
+.box-configurations td {
+  position: relative;
+}
+.box-configurations input[aria-invalid="true"] {
+  border: 1px solid #d10029;
+}
+.box-configurations label.error {
+  position: absolute;
+  width: 100%;
+  display: block;
+  margin-top: 3px;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+  color: #d10029;
+}
+.box-configurations button.primary {
+  margin-left: 6px;
+}
+.review-submit table {
+  width: 500px;
 }
 .block-category-event {
   background: #f0f0f0;
