@@ -22,6 +22,11 @@
       <PhpCSFixerConfiguration tool_path="$PROJECT_DIR$/vendor/bin/php-cs-fixer" />
     </phpcsfixer_settings>
   </component>
+  <component name="PhpCodeSniffer">
+    <phpcs_settings>
+      <PhpCSConfiguration beautifier_path="$PROJECT_DIR$/vendor/bin/phpcbf" tool_path="$PROJECT_DIR$/vendor/bin/phpcs" />
+    </phpcs_settings>
+  </component>
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/magento/module-inventory-in-store-pickup-webapi-extension" />
@@ -606,9 +611,10 @@
       <path value="$PROJECT_DIR$/vendor/magento/module-media-gallery" />
       <path value="$PROJECT_DIR$/vendor/magento/module-media-gallery-cms-ui" />
       <path value="$PROJECT_DIR$/vendor/magento/module-inventory-sales-async-order" />
+      <path value="$PROJECT_DIR$/vendor/markshust/magento2-module-layouthandlelogger" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.3">
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStan">
@@ -622,10 +628,8 @@
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/vendor/autoload.php" />
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/vendor/autoload.php" />
       <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/dev/tests/unit/phpunit.xml.dist" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
-      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/vendor/autoload.php" />
-      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromClone/vendor/autoload.php" />
-      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/dev/tests/integration/testsuite/Magento/Framework/Composer/_files/testFromCreateProject/vendor/autoload.php" />
     </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">

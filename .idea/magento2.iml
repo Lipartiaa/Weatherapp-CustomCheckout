@@ -685,6 +685,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/webonyx/graphql-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/weew/helpers-array" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/wikimedia/less.php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/markshust/magento2-module-layouthandlelogger" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

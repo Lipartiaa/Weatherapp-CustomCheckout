@@ -21447,6 +21447,47 @@
             "install-path": "../magento/zend-pdf"
         },
         {
+            "name": "markshust/magento2-module-layouthandlelogger",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markshust/magento2-module-layouthandlelogger.git",
+                "reference": "46a70f444f310312b5ddb3833c41d104ae539c0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markshust/magento2-module-layouthandlelogger/zipball/46a70f444f310312b5ddb3833c41d104ae539c0e",
+                "reference": "46a70f444f310312b5ddb3833c41d104ae539c0e",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": ">=103",
+                "php": "^8"
+            },
+            "time": "2023-02-07T00:34:02+00:00",
+            "type": "magento2-module",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MarkShust\\LayoutHandleLogger\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The LayoutHandleLogger module displays layout handles when in developer mode.",
+            "support": {
+                "issues": "https://github.com/markshust/magento2-module-layouthandlelogger/issues",
+                "source": "https://github.com/markshust/magento2-module-layouthandlelogger/tree/1.0.0"
+            },
+            "install-path": "../markshust/magento2-module-layouthandlelogger"
+        },
+        {
             "name": "monolog/monolog",
             "version": "2.10.0",
             "version_normalized": "2.10.0.0",

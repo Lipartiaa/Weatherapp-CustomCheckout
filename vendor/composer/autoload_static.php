@@ -511,6 +511,7 @@ class ComposerStaticInit90c2d05bc79b71ef1374af3f88dcc9f9
         'f1c1523a4c5d520b50bffc4a75ea5a5c' => __DIR__ . '/..' . '/magento/module-tax-sample-data/registration.php',
         'f3d4617c4b29f1082289d89745685dad' => __DIR__ . '/..' . '/magento/module-widget-sample-data/registration.php',
         '759d958743dba8d926c9111b82afe3e9' => __DIR__ . '/..' . '/magento/module-wishlist-sample-data/registration.php',
+        '20436bb7d7525ddd03d55728f4a9d5d6' => __DIR__ . '/..' . '/markshust/magento2-module-layouthandlelogger/registration.php',
         'b4cf39431a4b949eea8aa69ebb3d39da' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 
@@ -626,6 +627,7 @@ class ComposerStaticInit90c2d05bc79b71ef1374af3f88dcc9f9
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MarkShust\\LayoutHandleLogger\\' => 29,
             'Magento\\Wishlist\\' => 17,
             'Magento\\WishlistSampleData\\' => 27,
             'Magento\\WishlistGraphQl\\' => 24,
@@ -1410,6 +1412,10 @@ class ComposerStaticInit90c2d05bc79b71ef1374af3f88dcc9f9
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'MarkShust\\LayoutHandleLogger\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/markshust/magento2-module-layouthandlelogger',
         ),
         'Magento\\Wishlist\\' => 
         array (
