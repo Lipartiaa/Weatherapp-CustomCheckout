@@ -1,0 +1,25 @@
+{
+    "name": "macademy/magento2-module-productcompare",
+    "description": "The ProductCompare module compares products by SKUs.",
+    "require": {
+        "php": "^8.1",
+        "magento/framework": "^103",
+        "magento/module-catalog": "^104"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Macademy\\ProductCompare\\": ""
+        }
+    }
+}
