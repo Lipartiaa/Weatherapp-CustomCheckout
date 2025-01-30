@@ -5992,10 +5992,6 @@ div[data-content-type='video'] video {
 .form.send.friend .g-recaptcha {
   margin-top: 40px;
 }
-.product-compare th.sku,
-.product-compare th.price {
-  width: 120px;
-}
 .block-category-event {
   background: #f0f0f0;
   color: #333333;

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<webapi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Webapi/etc/webapi.xsd">
+    <route url="/V1/signup" method="POST">
+        <service class="Devall\Signup\Api\SignupManagementInterface" method="createSignup"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/signups" method="GET">
+        <service class="Devall\Signup\Api\SignupManagementInterface" method="getAllSignups"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</webapi>
