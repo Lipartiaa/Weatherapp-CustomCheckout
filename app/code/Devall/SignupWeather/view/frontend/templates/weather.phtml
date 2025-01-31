@@ -1,0 +1,34 @@
+<form id="weather-form">
+    <label>ქალაქის სახელი:</label>
+    <input type="text" id="city" name="city" value="Tbilisi">
+    <button type="submit">ამინდის ნახვა</button>
+</form>
+
+<div id="weather-result"></div>
+
+<script type="text/javascript">
+    require(['jquery'], function ($) {
+        $('#weather-form').submit(function (event) {
+            event.preventDefault();
+            var city = $('#city').val();
+
+            $.ajax({
+                url: '/signupweather/index/weather',
+                type: 'GET',
+                data: { city: city },
+                success: function (response) {
+                    $('#weather-result').html(
+                        '<h3>' + response.name + ', ' + response.sys.country + '</h3>' +
+                        '<p>ტემპერატურა: ' + response.main.temp + '°C</p>' +
+                        '<p>ტენიანობა: ' + response.main.humidity + '%</p>' +
+                        '<p>ქარი: ' + response.wind.speed + ' m/s</p>' +
+                        '<p>ამინდი: ' + response.weather[0].description + '</p>'
+                    );
+                },
+                error: function () {
+                    $('#weather-result').html('<p>შეცდომა! სცადეთ ხელახლა.</p>');
+                }
+            });
+        });
+    });
+</script>

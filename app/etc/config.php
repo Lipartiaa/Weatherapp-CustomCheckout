@@ -346,7 +346,7 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
-        'Devall_Signup' => 1,
+        'Devall_SignupWeather' => 1,
         'MarkShust_LayoutHandleLogger' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
