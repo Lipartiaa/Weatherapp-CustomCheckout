@@ -1,1 +1,0 @@
-/var/www/html/lib/web/js-cookie/cookie-wrapper.js
