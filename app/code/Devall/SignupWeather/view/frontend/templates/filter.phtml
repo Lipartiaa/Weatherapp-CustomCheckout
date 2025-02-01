@@ -1,0 +1,12 @@
+<form action="" method="GET">
+    <label for="city">ქალაქი:</label>
+    <input type="text" id="city" name="city" value="<?php echo $block->getRequest()->getParam('city'); ?>" />
+
+    <label for="start_date">დაწყების თარიღი:</label>
+    <input type="date" id="start_date" name="start_date" value="<?php echo $block->getRequest()->getParam('start_date'); ?>" />
+
+    <label for="end_date">დასრულების თარიღი:</label>
+    <input type="date" id="end_date" name="end_date" value="<?php echo $block->getRequest()->getParam('end_date'); ?>" />
+
+    <button type="submit">ფილტრი</button>
+</form>

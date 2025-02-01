@@ -21,7 +21,7 @@ class WeatherApi
     ) {
         $this->curl = $curl;
         $this->logger = $logger;
-        $this->apiKey = 'შენი_API_KEY_აქ';
+        $this->apiKey = 'ff56ed4694fc5f46de4262bb192b5ee3';
     }
 
     public function getWeather(string $city): array
