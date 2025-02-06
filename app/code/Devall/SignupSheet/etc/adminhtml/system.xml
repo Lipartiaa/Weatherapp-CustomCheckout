@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/system_file.xsd">
+    <system>
+        <section id="devall_signup_sheet" translate="label" type="text" sortOrder="100">
+            <label>Signup Sheet Configuration</label>
+            <tab>general</tab>
+            <resource>Devall_SignupSheet::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10">
+                <label>General Settings</label>
+                <field id="enable_form" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Signup Form</label>
+                    <comment>Choose whether to display the signup form on the frontend.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

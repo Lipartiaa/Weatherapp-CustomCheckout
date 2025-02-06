@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+    <add id="Devall_SignupSheet::signup_sheet" title="Signup Sheet" module="Devall_SignupSheet" sortOrder="100" action="devall_signup/index/index" parent="Magento_Backend::customer" />
+</menu>

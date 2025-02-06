@@ -1,0 +1,13 @@
+<?php
+$isEnabled = $this->getLayout()->getBlock('devall.signup.form')->getConfigValue('devall_signup_sheet/general/enabled');
+?>
+
+<?php if ($isEnabled): ?>
+    <form action="#" method="post">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="date" name="date" required>
+        <button type="submit">Sign Up</button>
+    </form>
+<?php else: ?>
+    <p>Form not enabled</p>
+<?php endif; ?>

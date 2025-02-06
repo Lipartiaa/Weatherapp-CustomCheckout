@@ -347,6 +347,7 @@ return [
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
         'Devall_CustomCheckout' => 1,
+        'Devall_SignupSheet' => 1,
         'Devall_SignupWeather' => 1,
         'Devall_SimpleData' => 1,
         'MarkShust_LayoutHandleLogger' => 1,
