@@ -1,0 +1,22 @@
+<div class="checkout-step doctor-information">
+    <h2><?= __('Doctor Information') ?></h2>
+
+    <div class="field">
+        <label for="doctor-name"><?= __('Doctor Name') ?></label>
+        <input type="text" id="doctor-name" data-bind="value: doctorName" placeholder="Enter Doctor's Name" />
+    </div>
+
+    <div class="field">
+        <label for="doctor-phone"><?= __('Doctor Phone') ?></label>
+        <input type="text" id="doctor-phone" data-bind="value: doctorPhone" placeholder="Enter Doctor's Phone" />
+    </div>
+
+    <script>
+        require(['jquery'], function ($) {
+            $('#doctor-name, #doctor-phone').on('change', function () {
+                console.log('Doctor Name:', $('#doctor-name').val());
+                console.log('Doctor Phone:', $('#doctor-phone').val());
+            });
+        });
+    </script>
+</div>

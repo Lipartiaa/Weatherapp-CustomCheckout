@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Magento2PluginSettings">
+    <option name="pluginEnabled" value="true" />
     <option name="defaultLicenseName" value="Proprietary" />
-    <option name="magentoPath" value="" />
-    <option name="magentoVersion" value="any" />
-    <option name="magentoEdition" value="Platform Version:" />
+    <option name="magentoPath" value="$PROJECT_DIR$" />
+    <option name="magentoVersion" value="2.4.6" />
+    <option name="magentoEdition" value="Magento Open Source" />
   </component>
 </project>

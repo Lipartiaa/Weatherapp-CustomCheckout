@@ -1,0 +1,11 @@
+<?php
+/** @var \Magento\Customer\Model\Session $customerSession */
+/** @var string $storePhoneNumber */
+
+$firstName = $customerSession->getCustomer()->getFirstname();
+?>
+<div class="custom-welcome-message" style="position: absolute; top: 20px; right: 20px;">
+    <?php if ($firstName): ?>
+        <p>Welcome <?= $firstName ?>! Need help? Call us at <?= $storePhoneNumber ?></p>
+    <?php endif; ?>
+</div>

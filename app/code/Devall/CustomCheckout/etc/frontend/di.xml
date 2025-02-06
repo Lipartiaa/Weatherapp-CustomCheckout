@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Block\Onepage">
+        <arguments>
+            <argument name="layoutProcessors" xsi:type="array">
+                <item name="devall_customcheckout_checkout_layout_processor_updateaddresssortorder" xsi:type="object">Devall\CustomCheckout\Block\Checkout\LayoutProcessor\UpdateAddressSortOrder</item>
+                <item name="devall_customcheckout_checkout_layout_processor_addressclassificationattribute" xsi:type="object">Devall\CustomCheckout\Block\Checkout\LayoutProcessor\AddressClassificationAttribute</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="devall_customcheckout_checkoutconfigprovider" xsi:type="object">Devall\CustomCheckout\Model\CheckoutConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

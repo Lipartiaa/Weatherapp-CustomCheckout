@@ -1,0 +1,10 @@
+.checkout-step.doctor-information {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.checkout-step h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}

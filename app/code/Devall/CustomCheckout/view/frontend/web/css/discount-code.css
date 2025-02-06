@@ -1,0 +1,68 @@
+/* Apply default discount code styling */
+.discount-code-box {
+    background-color: #f7f7f7;  /* Light background for contrast */
+    border: 1px solid #e0e0e0;  /* Subtle border */
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;  /* Space between other components */
+}
+
+.discount-code-box input {
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    width: 70%;  /* Make input occupy most of the space */
+    font-size: 14px;
+}
+
+.discount-code-box button {
+    background-color: #005eae;  /* Default blue color for buttons */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.discount-code-box button:hover {
+    background-color: #004b8d;  /* Darker blue on hover */
+}
+
+.discount-code-box .apply-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    color: #005eae;
+    cursor: pointer;
+}
+
+.discount-code-box .apply-link svg {
+    margin-left: 5px;
+    width: 12px;
+    height: 12px;
+}
+
+/* Sidebar specific adjustments */
+.checkout-sidebar .discount-code-box {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 380px;  /* Limiting sidebar width */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .discount-code-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .discount-code-box input {
+        width: 100%;  /* Full width on smaller screens */
+    }
+
+    .discount-code-box button {
+        width: 100%;  /* Full width on smaller screens */
+        margin-top: 10px;
+    }
+}

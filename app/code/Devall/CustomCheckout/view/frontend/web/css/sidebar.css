@@ -1,0 +1,16 @@
+.sidebar-action {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f5f5f5;
+}
+
+.sidebar-action a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar-action a:hover {
+    color: #0056b3;
+}
