@@ -1,1 +1,0 @@
-/var/www/html/app/code/Devall/CustomCheckout/view/frontend/web/js/view/summary/cart-items.js

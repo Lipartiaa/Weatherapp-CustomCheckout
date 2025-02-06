@@ -1,0 +1,124 @@
+<!-- Weather Form -->
+<form id="weather-form">
+    <label for="city">City *</label>
+    <input type="text" id="city" name="city" required>
+    <button type="submit">Submit</button>
+</form>
+
+
+<div id="weather-result"></div>
+
+
+<h3>Weather Historical Data <button id="print-btn">Print All</button></h3>
+<table id="weather-history">
+    <thead>
+    <tr>
+        <th>City</th>
+        <th>Country</th>
+        <th>Description</th>
+        <th>Temperature (°C)</th>
+        <th>Feels Like (°C)</th>
+        <th>Pressure (hPa)</th>
+        <th>Humidity (%)</th>
+        <th>Wind Speed (meter/sec)</th>
+        <th>Sunrise (UTC)</th>
+        <th>Sunset (UTC)</th>
+        <th>Checked On</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script type="text/javascript">
+    require(['jquery'], function ($) {
+        $('#weather-form').submit(function (event) {
+            event.preventDefault();
+            var city = $('#city').val();
+
+            $.ajax({
+                url: '/signupweather/index/weather',
+                type: 'GET',
+                data: { city: city },
+                success: function (response) {
+                    if (response.error) {
+                        $('#weather-result').html('<p>' + response.error + '</p>');
+                        return;
+                    }
+
+                    var weatherHtml = '<ul>' +
+                        '<li><b>City:</b> ' + response.name + '</li>' +
+                        '<li><b>Country:</b> ' + response.sys.country + '</li>' +
+                        '<li><b>Description:</b> ' + response.weather[0].description + '</li>' +
+                        '<li><b>Temperature (°C):</b> ' + response.main.temp + '</li>' +
+                        '<li><b>Feels Like (°C):</b> ' + response.main.feels_like + '</li>' +
+                        '<li><b>Pressure (hPa):</b> ' + response.main.pressure + '</li>' +
+                        '<li><b>Humidity (%):</b> ' + response.main.humidity + '</li>' +
+                        '<li><b>Wind Speed (meter/sec):</b> ' + response.wind.speed + '</li>' +
+                        '<li><b>Sunrise (UTC):</b> ' + new Date(response.sys.sunrise * 1000).toUTCString() + '</li>' +
+                        '<li><b>Sunset (UTC):</b> ' + new Date(response.sys.sunset * 1000).toUTCString() + '</li>' +
+                        '</ul>';
+                    $('#weather-result').html(weatherHtml);
+
+
+                    var historyHtml = '<tr>' +
+                        '<td>' + response.name + '</td>' +
+                        '<td>' + response.sys.country + '</td>' +
+                        '<td>' + response.weather[0].description + '</td>' +
+                        '<td>' + response.main.temp + '</td>' +
+                        '<td>' + response.main.feels_like + '</td>' +
+                        '<td>' + response.main.pressure + '</td>' +
+                        '<td>' + response.main.humidity + '</td>' +
+                        '<td>' + response.wind.speed + '</td>' +
+                        '<td>' + new Date(response.sys.sunrise * 1000).toUTCString() + '</td>' +
+                        '<td>' + new Date(response.sys.sunset * 1000).toUTCString() + '</td>' +
+                        '<td>' + new Date().toUTCString() + '</td>' +
+                        '</tr>';
+                    $('#weather-history tbody').prepend(historyHtml);
+                },
+                error: function () {
+                    $('#weather-result').html('<p>Error! Please try again.</p>');
+                }
+            });
+        });
+
+        $('#print-btn').click(function () {
+            var printWindow = window.open('', '', 'height=600,width=800');
+            var printContent = '<html><head><title>Weather Historical Data</title>';
+
+            printContent += '<style>' +
+                'body { font-family: Arial, sans-serif; margin: 20px; }' +
+                'h3 { color: #4CAF50; }' +
+                'table { width: 100%; border-collapse: collapse; margin-top: 20px; }' +
+                'th, td { padding: 8px 12px; border: 1px solid #ddd; text-align: left; }' +
+                'th { background-color: #f2f2f2; font-weight: bold; }' +
+                'td { background-color: #f9f9f9; }' +
+                'ul { list-style-type: none; padding: 0; }' +
+                'ul li { margin-bottom: 10px; font-size: 14px; }' +
+                '</style>';
+
+            printContent += '</head><body>';
+            printContent += '<h3>Weather Historical Data</h3>';
+            printContent += '<table>' +
+                '<thead><tr>' +
+                '<th>City</th>' +
+                '<th>Country</th>' +
+                '<th>Description</th>' +
+                '<th>Temperature (°C)</th>' +
+                '<th>Feels Like (°C)</th>' +
+                '<th>Pressure (hPa)</th>' +
+                '<th>Humidity (%)</th>' +
+                '<th>Wind Speed (meter/sec)</th>' +
+                '<th>Sunrise (UTC)</th>' +
+                '<th>Sunset (UTC)</th>' +
+                '<th>Checked On</th>' +
+                '</tr></thead>' +
+                '<tbody>' + $('#weather-history tbody').html() + '</tbody>' +
+                '</table>';
+
+            printContent += '</body></html>';
+            printWindow.document.write(printContent);
+            printWindow.document.close();
+            printWindow.print();
+        });
+    });
+</script>

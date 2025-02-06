@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Devall_SignupWeather::menu"
+             title="Signup Weather"
+             module="Devall_SignupWeather"
+             sortOrder="10"
+             parent="Magento_Backend::content"
+             resource="Devall_SignupWeather::menu"/>
+    </menu>
+</config>
